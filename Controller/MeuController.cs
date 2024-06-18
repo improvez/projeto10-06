@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace projeto10_06
+namespace projeto10_06.Controller
 {
-    public class DataSet
+    public class MeuController
     {
-        public static List<Book> Books { get; set; }
         
     }
 }

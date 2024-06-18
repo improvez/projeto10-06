@@ -1,7 +1,9 @@
-﻿Console.WriteLine("Hello Olá!");
+﻿
+using projeto10_06;
 
 bool connect = true;
-do {
+do
+{
     Console.WriteLine("**********************");
     Console.WriteLine("PROGRAMA DE CADASTRO");
     Console.WriteLine("**********************");
@@ -16,24 +18,37 @@ do {
 
     int menuNumber = 0;
 
-    menuNumber = Convert.ToInt32(Console.ReadLine());
-    
-    switch(menuNumber) {
-        case 0:
-            connect = false;
-        break;
-        case 1:
-            Console.WriteLine("Opção 1");
-        break;
-        case 2:
-            Console.WriteLine("Opção 2");
-        break;
-        case 3:
-            Console.WriteLine("Opção 3");
-        break;
+    try
+    {
 
-        default:
-            Console.WriteLine("Opção inválida, tente novamente");
-        break;
+        menuNumber = Convert.ToInt32(Console.ReadLine());
+
+        switch (menuNumber)
+        {
+            case 0:
+                connect = false;
+                break;
+            case 1:
+                Console.WriteLine("Opção 1");
+                BookView bookView= new BookView();
+                break;
+            case 2:
+                Console.WriteLine("Opção 2");
+                break;
+            case 3:
+                Console.WriteLine("Opção 3");
+                break;
+
+            default:
+                Console.WriteLine("Opção inválida, tente novamente");
+                break;
+        }
     }
-} while(connect);
+    catch
+    {
+        Console.WriteLine("Opção inválida.");
+        menuNumber = -1;
+        connect = true;
+    }
+
+} while (connect);

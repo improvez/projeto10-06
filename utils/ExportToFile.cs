@@ -2,7 +2,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace _projeto01 {
+namespace projeto10_06 {
     public class ExportToFile {
 
         private const string dir = @"C:\Users\386188\Desktop\Lucas Zanotto\teste01\";
