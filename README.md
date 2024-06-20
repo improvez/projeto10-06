@@ -13,3 +13,5 @@ Listar todos os livros, usuários e autores cadastrados, mostrando suas informa�
 Atualizar os dados de um livro ou autor existente, como o nome do livro, o autor, o gênero ou sua avaliação, valido também para os usuário e autores.
 Excluir um livro, usuários ou autores da biblioteca, caso não sejam mais necessários.
 Existe uma funcionalidade para listar os livros da biblioteca por ordem de melhor avaliação. 
+
+Para executar o projeto basta instalar o C# e colocar o comando "dotnet run".
