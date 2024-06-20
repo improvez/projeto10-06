@@ -21,40 +21,21 @@ namespace projeto10_06
             return bookRepositor.Retrieve(id);
         }
 
-        public bool ExportDelimited() {
-            List<Book> list = bookRepositor.Retrieve();
-
-            string fileContent = string.Empty;
-
-            foreach(var b in list) {
-                fileContent += $"{b.PrintToExportDelimited()}\n";
-            }
-
-            string fileName = $"Customer_{DateTimeOffset.Now.ToUnixTimeSeconds()}.txt";
-
-            return ExportToFile.SaveToDelimitedTxt(fileName, fileContent);
+        public List<Book> Get() {
+            return bookRepositor.Retrieve();
         }
 
-        public string ImportFromDelimited(string fileName, string delimiter) {
-            bool result = true;
-            string msgReturn = string.Empty;
-            int lineCountSuccess = 0;
-            int lineCountError = 0;
-            int lineCountTotal = 0;
+        public List<Book> GetByName(string name) {
+            return bookRepositor.RetrieveByName(name);
+        }
 
-            try {
-                if(!File.Exists(fileName)) {
-                    return "ERRO: Arquivo de importação não encontrado.";
+        public void Update(Book book) {
+            bookRepositor.Update(book);
+        }
 
-                    using(StreamReader sr = new StreamReader(fileName)) {
-                        string line = string.Empty;
-                        while((line = sr.ReadLine()) != null) {
-                            lineCountTotal++;
-                            if(!bookRepositor.Import)
-                        }
-                    }
-                }
-            }
+        public void Delete(int id) {
+            bookRepositor.Delete(id);
         }
     }
+
 }

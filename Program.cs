@@ -1,11 +1,10 @@
-﻿
-using projeto10_06;
+﻿using projeto10_06;
 
 bool connect = true;
 do
 {
     Console.WriteLine("**********************");
-    Console.WriteLine("PROGRAMA DE CADASTRO");
+    Console.WriteLine("BIBLIOTECA");
     Console.WriteLine("**********************");
     Console.WriteLine();
 
@@ -20,7 +19,6 @@ do
 
     try
     {
-
         menuNumber = Convert.ToInt32(Console.ReadLine());
 
         switch (menuNumber)
@@ -29,16 +27,14 @@ do
                 connect = false;
                 break;
             case 1:
-                Console.WriteLine("Opção 1");
-                BookView bookView= new BookView();
+                BookView bookView = new BookView();
                 break;
             case 2:
-                Console.WriteLine("Opção 2");
+                AuthorView authorView = new AuthorView();
                 break;
             case 3:
-                Console.WriteLine("Opção 3");
+                UserView userView = new UserView();
                 break;
-
             default:
                 Console.WriteLine("Opção inválida, tente novamente");
                 break;
@@ -50,5 +46,4 @@ do
         menuNumber = -1;
         connect = true;
     }
-
 } while (connect);
