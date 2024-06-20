@@ -1,5 +1,7 @@
 # projeto10-06
 
+Nome dos integrantes: Lucas Abati Zanoto. Código: 386188.
+
 O projeto é um CRUD simples em C# de um sistema de Biblioteca, usando a estrutura de camadas MVC.
 Para navegar no sistema é usado os número de 0 - 6.
 
