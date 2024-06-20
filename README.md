@@ -1,4 +1,4 @@
-# projeto10-06
+# Sistema de Biblioteca
 
 Nome dos integrantes: Lucas Abati Zanoto. Código: 386188.
 
